@@ -14,4 +14,10 @@
       </div>
     </div>
   </body>
+  <script>
+    const banner = document.querySelector(".banner");
+    const gifURL = "./img/Ink-lvl-2.gif";
+
+    banner.style.setProperty("--mask-url", `url(${gifURL}?t=${Date.now()})`);
+  </script>
 </html>

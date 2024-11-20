@@ -1,7 +1,17 @@
+:root {
+  --smoky-black: #0f0f0f;
+  --purlple: #3700fd;
+}
+
+::selection {
+  background: var(--purlple);
+  color: var(--smoky-black);
+}
+
 body {
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: #ffffff;
 }
 
 .banner {
@@ -15,18 +25,20 @@ body {
 .banner .content .title {
   font-family: "Hallowed Grounds";
   font-size: 9em;
+  text-shadow: 0 0 10px rgba(43, 42, 42, 0.8), 0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2);
 }
 
 .banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(./img/344388-Melantha-Arknights-Anime-Girls-Video-Game.jpg);
+  background-image: url(./img/124447129_p0.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center lower;
   z-index: -1;
 
-  mask-image: url(./img/Ink-lvl-2.gif);
+  mask-image: var(--mask-url, url(./img/Ink-lvl-2.gif));
   mask-size: cover;
   mask-position: center;
 }
