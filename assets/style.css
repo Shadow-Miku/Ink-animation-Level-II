@@ -42,3 +42,28 @@ body {
   mask-size: cover;
   mask-position: center;
 }
+
+/* Estilos responsivos para pantallas móviles */
+@media (max-width: 768px) {
+  .banner {
+    height: 100vh; /* Mantiene la altura completa de la pantalla */
+    padding: 10px; /* Reduce el padding para pantallas pequeñas */
+  }
+
+  .banner .content .title {
+    font-size: clamp(4.5em, 6vw, 6em); /* Ajusta el tamaño del texto */
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(179, 43, 43, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.2);
+  }
+
+  .banner::before {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+
+    mask-size: cover;
+    mask-position: center;
+  }
+}
